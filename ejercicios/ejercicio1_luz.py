@@ -7,7 +7,7 @@ def leerconsumo():
     consumo = float(input("Ingrese el consumo mensual en kWh: "))
     return consumo
 
-def calcular_recibo(consumo):
+def calcularPago(consumo):
     if consumo <= 150:
         total = consumo * 1.00
     elif consumo <= 280:
@@ -16,6 +16,6 @@ def calcular_recibo(consumo):
         total = 150 * 1.00 + 130 * 1.50 + (consumo - 280) * 3.00
     return total
 
-def mostrar_recibo(total):
+def mostrarRecibo(total):
     print(f"El importe del recibo es: ${total:.2f}")
 

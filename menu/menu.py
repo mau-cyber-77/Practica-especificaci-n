@@ -7,46 +7,46 @@ from ejercicios import ejercicio6_boleto_de_cine as ej6
 from ejercicios import ejercicio7_multa_por_velocidad as ej7
 
 def ejecutarEjercicio1(): 
-    consumo= ej1.leerconsumo()
-    pago=ej1.calcularPago(consumo)
-    ej1.mostrarRecibo(consumo, pago)
-
+    consumo= leerconsumo()
+    pago=alcularPago(consumo)
+    recibo=mostrarRecibo(consumo, pago)
 
 def ejecutarEjercicio2(): 
-    parciales=  ej2.leerParciales()
-    parciales=ej2.calcularFinal(parciales)
-    estado=ej2.determinarEstado(parciales)
-    ej2.mostrarResultados(parciales, estado)
+    parciales = leerParciales()
+    calificacion = calcularFinal(parciales)
+    sin_reprobadas = verificarParciales(parciales)
+    estado = determinarEstado(calificacion, sin_reprobadas)
+    
 
 def ejecutarEjercicio3(): 
-    subtotal=ej3.leerSubtotal()
-    descuento=ej3.calcularDescuento(subtotal)
+    subtotal=leerSubtotal()
+    descuento=calcularDescuento(subtotal)
     total=subtotal-descuento
-    iva=ej3.calcularIVA(total)
-    ej3.mostrarTotal(subtotal, descuento, iva, total)
+    iva=calcularIVA(total)
+    total= mostrarTotal(subtotal, descuento, iva, total)
 
 def ejecutarEjercicio4(): 
-    tiempo=ej4.leerMinutos()
-    cobro=ej4.calcularCobro(tiempo)
-    ej4.mostrarCobro(cobro)
+    tiempo= leerMinutos()
+    cobro= calcularCobro(tiempo)
+    cobro= mostrarCobro(cobro)
 
 
 def ejecutarEjercicio5(): 
-    horas = ej5.leerHoras()
-    renta = ej5.calcularRenta(horas)
-    ej5.mostrarRenta(renta)
+    horas = leerHoras()
+    renta = calcularRenta(horas)
+    renta= mostrarRenta(renta)
 
 
 def ejecutarEjercicio6():
-    edad = ej6.leerEdad()
-    precio = ej6.calcularPrecio(edad)
-    ej6.mostrarPrecio(precio)
+    edad= leerEdad()
+    precio= calcularPrecio(edad)
+    precio= mostrarPrecio(precio)
 
 
 def ejecutarEjercicio7():
-    velocidad = ej7.leerVelocidad()
-    multa = ej7.calcularMulta(velocidad)
-    ej7.mostrarMulta(multa)
+    velocidad = leerVelocidad()
+    multa = calcularMulta(velocidad)
+    multa= mostrarMulta(multa)
 
 def mostrarMenu(): 
     print() 
@@ -81,5 +81,4 @@ def menus():
             ejecutarEjercicio7()
         elif opcion != "0":
             print("Opción no válida.")
-
 

@@ -7,46 +7,46 @@ from ejercicios import ejercicio6_boleto_de_cine as ej6
 from ejercicios import ejercicio7_multa_por_velocidad as ej7
 
 def ejecutarEjercicio1(): 
-    consumo= leerconsumo()
-    pago=alcularPago(consumo)
-    recibo=mostrarRecibo(consumo, pago)
+    consumo=ej1.leerconsumo()
+    pago=ej1.calcularPago(consumo)
+    recibo=ej1.mostrarRecibo(consumo, pago)
 
 def ejecutarEjercicio2(): 
-    parciales = leerParciales()
-    calificacion = calcularFinal(parciales)
-    sin_reprobadas = verificarParciales(parciales)
-    estado = determinarEstado(calificacion, sin_reprobadas)
+    parciales = ej2.leerParciales()
+    calificacion = ej2.calcularFinal(parciales)
+    sin_reprobadas = ej2.verificarParciales(parciales)
+    estado = ej2.determinarEstado(calificacion, sin_reprobadas)
     
 
 def ejecutarEjercicio3(): 
-    subtotal=leerSubtotal()
-    descuento=calcularDescuento(subtotal)
+    subtotal=ej3.leerSubtotal()
+    descuento=ej3.calcularDescuento(subtotal)
     total=subtotal-descuento
-    iva=calcularIVA(total)
-    total= mostrarTotal(subtotal, descuento, iva, total)
+    iva=ej3.calcularIVA(total)
+    total= ej3.mostrarTotal(subtotal, descuento, iva, total)
 
 def ejecutarEjercicio4(): 
-    tiempo= leerMinutos()
-    cobro= calcularCobro(tiempo)
-    cobro= mostrarCobro(cobro)
+    tiempo= ej4.leerMinutos()
+    cobro= ej4.calcularCobro(tiempo)
+    cobro= ej4.mostrarCobro(cobro)
 
 
 def ejecutarEjercicio5(): 
-    horas = leerHoras()
-    renta = calcularRenta(horas)
-    renta= mostrarRenta(renta)
+    horas = ej5.leerHoras()
+    renta = ej5.calcularRenta(horas)
+    renta= ej5.mostrarRenta(renta)
 
 
 def ejecutarEjercicio6():
-    edad= leerEdad()
-    precio= calcularPrecio(edad)
-    precio= mostrarPrecio(precio)
+    edad= ej6.leerEdad()
+    precio= ej6.calcularPrecio(edad)
+    precio= ej6.mostrarPrecio(precio)
 
 
 def ejecutarEjercicio7():
-    velocidad = leerVelocidad()
-    multa = calcularMulta(velocidad)
-    multa= mostrarMulta(multa)
+    velocidad = ej7.leerVelocidad()
+    multa = ej7.calcularMulta(velocidad)
+    multa= ej7. mostrarMulta(multa)
 
 def mostrarMenu(): 
     print() 

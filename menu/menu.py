@@ -14,9 +14,9 @@ def ejecutarEjercicio1():
 
 def ejecutarEjercicio2(): 
     parciales=  ej2.leerParciales()
-    parciales=ej2.calcularFinal(parciales)
-    estado=ej2.determinarEstado(parciales)
-    ej2.mostrarResultados(parciales, estado)
+    calificacion_final=ej2.calcularFinal(parciales)
+    estado=ej2.determinarEstado(calificacion_final)
+    ej2.mostrarResultados(calificacion_final, estado)
 
 def ejecutarEjercicio3(): 
     subtotal=ej3.leerSubtotal()

@@ -7,46 +7,53 @@ from ejercicios import ejercicio6_boleto_de_cine as ej6
 from ejercicios import ejercicio7_multa_por_velocidad as ej7
 
 def ejecutarEjercicio1(): 
-    consumo= ej1.leerconsumo()
+    consumo=ej1.leerconsumo()
     pago=ej1.calcularPago(consumo)
-    ej1.mostrarRecibo(consumo, pago)
-
+    recibo=ej1.mostrarRecibo(consumo, pago)
 
 def ejecutarEjercicio2(): 
+<<<<<<< HEAD
     parciales=  ej2.leerParciales()
     calificacion_final=ej2.calcularFinal(parciales)
     estado=ej2.determinarEstado(calificacion_final)
     ej2.mostrarResultados(calificacion_final, estado)
+=======
+    parciales = ej2.leerParciales()
+    calificacion = ej2.calcularFinal(parciales)
+    sin_reprobadas = ej2.verificarParciales(parciales)
+    estado = ej2.determinarEstado(calificacion, sin_reprobadas)
+    
+>>>>>>> 4bde2e821bb4caebee378f00df305e3332ecb654
 
 def ejecutarEjercicio3(): 
     subtotal=ej3.leerSubtotal()
     descuento=ej3.calcularDescuento(subtotal)
     total=subtotal-descuento
     iva=ej3.calcularIVA(total)
-    ej3.mostrarTotal(subtotal, descuento, iva, total)
+    total= ej3.mostrarTotal(subtotal, descuento, iva, total)
 
 def ejecutarEjercicio4(): 
-    tiempo=ej4.leerMinutos()
-    cobro=ej4.calcularCobro(tiempo)
-    ej4.mostrarCobro(cobro)
+    tiempo= ej4.leerMinutos()
+    cobro= ej4.calcularCobro(tiempo)
+    cobro= ej4.mostrarCobro(cobro)
 
 
 def ejecutarEjercicio5(): 
     horas = ej5.leerHoras()
     renta = ej5.calcularRenta(horas)
-    ej5.mostrarRenta(renta)
+    renta= ej5.mostrarRenta(renta)
 
 
 def ejecutarEjercicio6():
-    edad = ej6.leerEdad()
-    precio = ej6.calcularPrecio(edad)
-    ej6.mostrarPrecio(precio)
+    edad= ej6.leerEdad()
+    precio= ej6.calcularPrecio(edad)
+    precio= ej6.mostrarPrecio(precio)
 
 
 def ejecutarEjercicio7():
     velocidad = ej7.leerVelocidad()
     multa = ej7.calcularMulta(velocidad)
-    ej7.mostrarMulta(multa)
+    multa= ej7. mostrarMulta(multa)
 
 def mostrarMenu(): 
     print() 
@@ -81,5 +88,4 @@ def menus():
             ejecutarEjercicio7()
         elif opcion != "0":
             print("Opción no válida.")
-
 

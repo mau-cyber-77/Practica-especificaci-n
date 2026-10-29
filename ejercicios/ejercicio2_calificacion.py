@@ -4,35 +4,35 @@ La calificación final de una materia se obtiene de tres parciales que valen 30%
 necesita mostrar la calificación final y si el alumno aprobó.
 """
 
+
 def leerParciales():
     parciales = []
-    for i in range(1, 4):
-        parcial = float(input(f"Ingrese la calificación del parcial {i}: "))
+    for i in range(3):
+        parcial = float(input(f"Ingrese la calificación del parcial {i + 1}: "))
         parciales.append(parcial)
     return parciales
 
-def calcularFinal(parciales):
-    if any(p < 50 for p in parciales):
-        return 0
-    return sum(p * w for p, w in zip(parciales, [0.3, 0.3, 0.4]))
+def calcularCalificacionFinal(parciales):
+    calificacion_final = (parciales[0] * 0.3) + (parciales[1] * 0.3) + (parciales[2] * 0.4)
+    return calificacion_final
+
+def verificarParciales(parciales):
+    for parcial in parciales:
+        if parcial < 50:
+            return False
+    return True
 
 def determinarEstado(calificacion_final):
-    if calificacion_final >= 70:
-        return "aprobó"
+    if not sin_reprobadas:
+        return "reprobo (tiene un parcial menor a 50)"
+    elif calificacion_final >= 70:
+        return "aprobo"
     else:
-        return "reprobó"
+        return "reprobo (calificación final menor a 70)"
 
 
 
-def mostrarResultados(calificacion_final):
-    estado = determinarEstado(calificacion_final)  
-    if calificacion_final == 0:
-        print("El alumno reprobó la materia.")
-    else:
-        print(f"La calificación final es: {calificacion_final:.2f}")
-        if calificacion_final >= 70:
-            print("El alumno aprobó la materia.")
-        else:
-            print("El alumno reprobó la materia.")
+    
+
 
 
